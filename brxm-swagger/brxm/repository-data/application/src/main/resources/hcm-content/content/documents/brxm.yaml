@@ -1,0 +1,9 @@
+/content/documents/brxm:
+  .meta:order-before: administration
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: 7e2f8381-4c11-4923-b771-a168d5890fed
+  hippo:name: BRXM Swagger demo
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 996bcac5-86cf-49b5-a7a3-16a74863e814
+  hippotranslation:locale: en

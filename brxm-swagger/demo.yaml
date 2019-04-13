@@ -1,0 +1,60 @@
+  swagger: "2.0"
+  info:
+    title: Sample API
+    description: API description in Markdown.
+    version: 1.0.0
+  #host: api.example.com
+  #basePath: /v1
+  schemes:
+    - http
+  paths:
+    /users:
+      get:
+        summary: Returns a list of users.
+        description: Get all users from the system
+        produces:
+          - application/json
+        responses:
+          200:
+            description: A list with all users.
+            schema:
+              type: array
+              items:
+                $ref: '#/definitions/User'
+          500:
+            description: Internal server error
+    /user/{userId}:
+      get:
+        summary: Get one user by ID
+        operationId: getUserById
+        produces:
+          - application/json
+        parameters:
+          - name: userId
+            in: path
+            description: ID of user to return
+            required: true
+            type: integer
+            format: int32
+        responses:
+          200:
+            description: The user with given ID.
+            schema:
+              $ref: '#/definitions/User'
+          404:
+            description: The user does not exist
+          500:
+            description: Internal server error
+
+  definitions:
+    User:
+      title: User
+      description: A user object representing a user
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: John Doe

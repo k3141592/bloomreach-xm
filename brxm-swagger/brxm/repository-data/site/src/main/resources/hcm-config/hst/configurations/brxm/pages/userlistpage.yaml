@@ -1,0 +1,9 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/brxm/hst:pages/userlistpage:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        hst:componentclassname: org.example.components.UserListComponent
+        hst:template: userlist

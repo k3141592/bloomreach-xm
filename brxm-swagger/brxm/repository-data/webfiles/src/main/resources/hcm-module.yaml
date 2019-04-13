@@ -1,0 +1,5 @@
+group: 
+  name: brxm
+project: brxm
+module:
+  name: brxm-repository-data-webfiles

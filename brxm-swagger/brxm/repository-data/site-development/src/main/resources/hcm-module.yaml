@@ -1,0 +1,6 @@
+site: brxm
+group: brxm
+project: brxm
+module:
+  name: brxm-repository-data-site-development
+  after: brxm-repository-data-site

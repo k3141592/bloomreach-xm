@@ -1,0 +1,4 @@
+/hst:hst/hst:configurations/brxm/hst:workspace/hst:sitemenus/main/User:
+  jcr:primaryType: hst:sitemenuitem
+  hst:referencesitemapitem: user
+  hst:repobased: false

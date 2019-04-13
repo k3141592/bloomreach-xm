@@ -1,0 +1,6 @@
+group:
+  name: brxm
+  after: hippo-cms
+project: brxm
+module:
+  name: brxm-repository-data-application

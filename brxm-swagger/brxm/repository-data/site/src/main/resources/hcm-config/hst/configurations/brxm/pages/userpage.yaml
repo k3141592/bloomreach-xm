@@ -1,0 +1,11 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/brxm/hst:pages/userpage:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        hst:componentclassname: org.example.components.UserComponent
+        hst:template: user
+        hst:parameternames: [userId]
+        hst:parametervalues: ['${1}']

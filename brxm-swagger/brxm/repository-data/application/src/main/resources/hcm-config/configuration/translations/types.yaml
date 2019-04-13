@@ -1,0 +1,62 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:translations/hippo:types/brxm:bannerdocument:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        brxm:content: Content
+        brxm:image: Image
+        brxm:link: Link
+        brxm:title: Title
+        jcr:name: Banner
+      /nl:
+        jcr:primaryType: hipposys:resourcebundle
+        brxm:content: Inhoud
+        brxm:image: Afbeelding
+        brxm:link: Link
+        brxm:title: Titel
+        jcr:name: Banner
+      /fr:
+        jcr:primaryType: hipposys:resourcebundle
+        brxm:content: Contenu
+        brxm:image: Image
+        brxm:link: Lien
+        brxm:title: Titre
+        jcr:name: Bannière
+      /de:
+        jcr:primaryType: hipposys:resourcebundle
+        brxm:content: Inhalt
+        brxm:image: Abbildung
+        brxm:link: Link
+        brxm:title: Titel
+        jcr:name: Banner
+    /hippo:configuration/hippo:translations/hippo:types/brxm:contentdocument:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        brxm:content: Content
+        brxm:introduction: Introduction
+        brxm:publicationdate: Publication date
+        brxm:title: Title
+        jcr:name: Simple Document
+      /nl:
+        jcr:primaryType: hipposys:resourcebundle
+        brxm:content: Inhoud
+        brxm:introduction: Introductie
+        brxm:publicationdate: Publicatiedatum
+        brxm:title: Titel
+        jcr:name: Eenvoudig Document
+      /fr:
+        jcr:primaryType: hipposys:resourcebundle
+        brxm:content: Contenu
+        brxm:introduction: Introduction
+        brxm:publicationdate: Date de publication
+        brxm:title: Titre
+        jcr:name: Document simple
+      /de:
+        jcr:primaryType: hipposys:resourcebundle
+        brxm:content: Inhalt
+        brxm:introduction: Einführung
+        brxm:publicationdate: Publikationsdatum
+        brxm:title: Titel
+        jcr:name: Einfaches Dokument

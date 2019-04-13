@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Spring config for connecting with the user api
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+  <bean id="org.example.user.ApiClient" class="org.example.user.ApiClient">
+    <property name="basePath" value="http://localhost:8090"/>
+    <property name="connectTimeout" value="1000" />
+  </bean>
+
+
+  <bean id="org.example.user.api.DefaultApi" class="org.example.user.api.DefaultApi">
+    <property name="apiClient" ref="org.example.user.ApiClient" />
+  </bean>
+
+
+</beans>

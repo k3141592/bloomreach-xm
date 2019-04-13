@@ -1,0 +1,7 @@
+/content/gallery/brxm:
+  jcr:primaryType: hippogallery:stdImageGallery
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 6fefd369-2aec-4327-8578-546d19afae30
+  hippo:name: BRXM Swagger demo
+  hippostd:foldertype: [new-image-folder]
+  hippostd:gallerytype: ['hippogallery:imageset']

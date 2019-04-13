@@ -1,0 +1,4 @@
+/hst:hst/hst:configurations/brxm/hst:workspace/hst:sitemenus/main/content:
+  .meta:order-before: User
+  jcr:primaryType: hst:sitemenuitem
+  hst:referencesitemapitem: content
