@@ -1,0 +1,1 @@
+Demo project BRXM connecting to a rest end point based on a Swagger definition
