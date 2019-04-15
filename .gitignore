@@ -25,5 +25,8 @@ HELP.md
 /.nb-gradle/
 /build/
 
-#BRXM repos
-/*repo*
+#BRXM repo(s)
+**/*repo*
+
+#BRXM essentials overlay
+**/essentials/overlays/
