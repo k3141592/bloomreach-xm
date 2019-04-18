@@ -1,1 +1,4 @@
-Test
+This repository contains some Bloomreach XM (previously Hippo CMS)
+
+. Bloomreach XM link:/brxm-swagger/readme.adoc[project] consuming a rest end point with a generated client via a
+  Swagger definition project. Including a Spring boot server with a generated endpoint.

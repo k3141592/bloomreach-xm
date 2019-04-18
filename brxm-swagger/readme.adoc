@@ -1,1 +1,22 @@
-Demo project BRXM connecting to a rest end point based on a Swagger definition
+Test
+
+This is demo how a Swagger api definition can be used withing Bloomreach XM. It exists out of two parts:
+
+
+*link:demo.yaml[API definition]* +
+The Swagger API definition is defined in the link:demo.yaml[] file.
+
+*link:server/[Server]* +
+A Spring boot application with a rest endpoint generated with the API definition. A Swagger ui is available via link:http://localhost:8090/swagger-ui.html[http://localhost:8090/swagger-ui.html]
+
+Running the project:
+[source,bash]
+----
+$ mvn clean verify
+$ mvn spring-boot:run
+----
+
+*link:brxm/[Bloomreach XM]*
+
+
+
