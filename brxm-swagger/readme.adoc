@@ -1,13 +1,14 @@
-Test
+= Bloomreach XM Swagger demo
 
-This is demo how a Swagger api definition can be used withing Bloomreach XM. It exists out of two parts:
-
+This demo shows how a Swagger api definition can be used withing Bloomreach XM.
 
 *link:demo.yaml[API definition]* +
-The Swagger API definition is defined in the link:demo.yaml[] file.
+The Swagger API definition is defined in the link:demo.yaml[] file. It's a simple api with two
+end points, one that returns a list of users and one that returns the user details.
 
 *link:server/[Server]* +
-A Spring boot application with a rest endpoint generated with the API definition. A Swagger ui is available via link:http://localhost:8090/swagger-ui.html[http://localhost:8090/swagger-ui.html]
+A Spring boot application with a rest endpoint. The endpoint is generated with the API definition. Swagger
+ui is available via link:http://localhost:8090/swagger-ui.html[]
 
 Running the project:
 [source,bash]
@@ -16,7 +17,39 @@ $ mvn clean verify
 $ mvn spring-boot:run
 ----
 
-*link:brxm/[Bloomreach XM]*
+*link:brxm/[Bloomreach XM]* +
+Bloomreach XM consumes the API provided by the Spring boot server. For this a Spring client is generated based
+on the api definition.  The generation is done with the swagger-codegen-maven-plugin, see code below. This snippit
+is  from the link:brxm-swagger/brxm/site/components/pom.xml[site component pom.xml] At line 13 the API spec is included.
 
+[source,xml, linenums]
+----
+include::brxm/site/components/pom.xml[tag=swagger-codegen-maven-plugin]
+----
+There are also some extra dependencies included (in this case among others: okhttp, gson) based on the choosen libray
+the dependencies differ.
 
+The generated client is via Spring available in the HstComponents, Spring configuration in
+link:brxm-swagger/META-INF/hst-assembly/overrides/user-api-client.xml[].
 
+Spring configuration:
+[source,xml,linenums]
+----
+include::brxm/site/components/src/main/resources/META-INF/hst-assembly/overrides/user-api-client.xml[]
+----
+Importent note: don't forget to configure the connectTimeout (in milliseconds), default value depends on the used library.
+
+In the hst component the Spring bean is available, see
+link:brxm/site/components/src/main/java/org/example/components/UserComponent.java[]
+
+[source,java]
+----
+include::brxm/site/components/src/main/java/org/example/components/UserComponent.java[tag=getbean]
+----
+
+Running the project:
+[source,bash]
+----
+$ mvn clean verify
+$ mvn -P cargo.run
+----

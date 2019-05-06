@@ -67,7 +67,6 @@
                         <configuration>
                             <inputSpec>${basedir}/../demo.yaml</inputSpec>
                             <artifactId>contract-service</artifactId>
-                            <!--<output>/target/generated-sources</output>-->
                             <language>spring</language>
                             <modelPackage>${project.groupId}.swagger.model</modelPackage>
                             <apiPackage>${project.groupId}.swagger.api</apiPackage>
@@ -77,8 +76,6 @@
                                 <output>${project.build.directory}/generated-sources</output>
                                 <interfaceOnly>true</interfaceOnly>
                                 <library>spring-boot</library>
-                                <!--<dateLibrary>${generator.datelibrary}</dateLibrary>-->
-                                <!--<configPackage>ru.payhub.config</configPackage>-->
                                 <singleContentTypes>true</singleContentTypes>
                             </configOptions>
                         </configuration>

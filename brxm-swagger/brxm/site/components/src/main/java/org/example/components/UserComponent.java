@@ -19,8 +19,10 @@ public class UserComponent extends BaseHstComponent {
     public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
         Logger logger = LoggerFactory.getLogger(UserComponent.class);
 
+        //tag::getbean[]
         // Getting the Spring bean
         DefaultApi defaultApi = HstServices.getComponentManager().getComponent("org.example.user.api.DefaultApi");
+        //end::getbean[]
 
         UserVo userVo = null;
 

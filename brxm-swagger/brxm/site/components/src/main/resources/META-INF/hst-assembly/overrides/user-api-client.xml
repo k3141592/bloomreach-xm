@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Spring config for connecting with the user api
--->
-
+<!-- Spring config for connecting with the user api -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
     <property name="locations">
-      <!-- Default location inside war file -->
-        <value>file:/${catalina.base}/conf/application-config.properties</value>
-      </property>
+      <value>file:/${catalina.base}/conf/application-config.properties</value>
+    </property>
   </bean>
 
   <bean id="org.example.user.ApiClient" class="org.example.user.ApiClient">
@@ -19,10 +15,7 @@ Spring config for connecting with the user api
     <property name="connectTimeout" value="1000" />
   </bean>
 
-
   <bean id="org.example.user.api.DefaultApi" class="org.example.user.api.DefaultApi">
     <property name="apiClient" ref="org.example.user.ApiClient" />
   </bean>
-
-
 </beans>

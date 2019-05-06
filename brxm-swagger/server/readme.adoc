@@ -2,15 +2,14 @@
 Execute the following command:
 [source, bash]
 ----
-$./gradlew bootRun
 $ mvn clean verify
 $ mvn spring-boot:run
 ----
 
-Urls:
+Urls: +
 Swagger UI : http://localhost:8090/swagger-ui.html
 
 
-Info:
+Info: +
 https://stackoverflow.com/questions/49384545/how-to-generate-client-code-using-with-swagger-codegen-plugin-maven
 

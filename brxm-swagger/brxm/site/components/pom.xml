@@ -90,7 +90,8 @@
     </resources>
 
     <plugins>
-      <!-- Swagger stuff -->
+      <!-- tag::swagger-codegen-maven-plugin[] -->
+      <!-- Swagger codegen -->
       <plugin>
         <groupId>io.swagger</groupId>
         <artifactId>swagger-codegen-maven-plugin</artifactId>
@@ -104,10 +105,8 @@
             <configuration>
               <inputSpec>${basedir}/../../../demo.yaml</inputSpec>
               <language>java</language>
-
               <apiPackage>org.example.user.api</apiPackage>
               <modelPackage>org.example.user.model</modelPackage>
-
               <generateApiTests>true</generateApiTests>
               <generateModelTests>false</generateModelTests>
               <generateModelDocumentation>false</generateModelDocumentation>
@@ -122,6 +121,7 @@
           </execution>
         </executions>
       </plugin>
+      <!-- end::swagger-codegen-maven-plugin[] -->
     </plugins>
   </build>
 </project>
