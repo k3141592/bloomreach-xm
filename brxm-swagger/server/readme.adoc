@@ -8,8 +8,3 @@ $ mvn spring-boot:run
 
 Urls: +
 Swagger UI : http://localhost:8090/swagger-ui.html
-
-
-Info: +
-https://stackoverflow.com/questions/49384545/how-to-generate-client-code-using-with-swagger-codegen-plugin-maven
-
