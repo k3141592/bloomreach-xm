@@ -22,7 +22,7 @@ public class UsersController implements UsersApi {
     UserService userService;
 
     @Override
-    public ResponseEntity<List<User>> usersGet() {
+    public ResponseEntity<List<User>> getAllUsers() {
         return new ResponseEntity<>(userService.getAllUsers(), HttpStatus.OK);
     }
 }

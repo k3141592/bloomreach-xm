@@ -29,7 +29,7 @@ public class UserListComponent extends BaseHstComponent {
 
         List<User> users = new ArrayList<>();
         try {
-            users = defaultApi.usersGet();
+            users = defaultApi.getAllUsers();
         } catch (ApiException e) {
             logger.error("Gettign all users failed. Error: " + e.getMessage());
         }

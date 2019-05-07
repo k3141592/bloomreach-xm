@@ -3,6 +3,7 @@
     title: Sample API
     description: API description in Markdown.
     version: 1.0.0
+  host: localhost
   schemes:
     - http
   paths:
@@ -10,6 +11,7 @@
       get:
         summary: Returns a list of users.
         description: Get all users from the system
+        operationId: getAllUsers
         produces:
           - application/json
         responses:
@@ -24,6 +26,7 @@
     /user/{userId}:
       get:
         summary: Get one user by ID
+        description: Get one user by it's ID
         operationId: getUserById
         produces:
           - application/json
